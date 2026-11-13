@@ -30,7 +30,7 @@ self.addEventListener('fetch', function (e) {
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
   e.respondWith(
-    withTimeout(3500, fetch(req)).then(function (res) {
+    withTimeout(3500, fetch(req, { cache: 'no-cache' }))
       if (res && res.status === 200) {
         var copy = res.clone();
         caches.open(CACHE).then(function (c) { c.put(req, copy); });
