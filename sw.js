@@ -2,7 +2,7 @@
 // It keeps a copy of the app on the phone so it opens with no signal.
 // When there is signal it fetches the newest version first, and falls back to the saved copy
 // if the network is slow or missing.
-const CACHE = 'spain-ride-v0.25.0';
+const CACHE = 'spain-ride-v0.26.0';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', function (e) {
